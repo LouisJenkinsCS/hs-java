@@ -2,6 +2,7 @@
 module JVM.Exceptions where
 
 import Control.Monad.Exception
+import Data.Typeable
 import qualified Data.ByteString.Lazy as B
 
 import JVM.ClassFile
