@@ -21,7 +21,7 @@ import Java.JAR.Archive
 -- | For given list of glob masks, return list of matching files
 glob :: FilePath -> [FilePath] -> IO [FilePath]
 glob dir patterns = do
-  (matches, _) <- globDir (map compile patterns) dir
+  matches <- globDir (map compile patterns) dir
   return $ concat matches
 
 -- | Append one file to ClassPath forest
